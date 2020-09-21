@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "149220826138",
+    "firebase_url": "https://syncmytable.firebaseio.com",
+    "project_id": "syncmytable",
+    "storage_bucket": "syncmytable.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149220826138:android:49986741c6ae25a82e45a3",
+        "android_client_info": {
+          "package_name": "com.example.synchmytable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149220826138-8t3ef81alia1be14cd8spldetruu4vq4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.synchmytable",
+            "certificate_hash": "9a97105acdd1426607cba2bc0fa666a3a931c038"
+          }
+        },
+        {
+          "client_id": "149220826138-psaiomb85m9qmt1pfmq7e7ld457voqoi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5rNGlddeN73aop2GAXsf0n27yOreA4BU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149220826138-psaiomb85m9qmt1pfmq7e7ld457voqoi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    android:background="@drawable/back">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="200dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="StudentLoginPage"
+            android:text="Student Login"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@android:color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/cr"
+            android:text="Cr Login"
+            android:onClick="CrLoginPage"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginLeft="20dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
