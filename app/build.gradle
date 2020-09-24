@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.synchmytable"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -35,5 +35,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.2'
     implementation 'com.google.firebase:firebase-analytics:17.5.0'
     implementation 'com.google.firebase:firebase-database:19.4.0'
+
+    implementation 'com.github.tlaabs:TimetableView:1.0.3-fx1'
 
 }

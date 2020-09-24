@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -167,5 +168,11 @@ public class CrHomePage extends AppCompatActivity {
             }
         });
         dialog.show();
+    }
+
+    public void timetableManagement(View view) {
+
+        Intent intent=new Intent(this,CrTimeTableManagement.class);
+        startActivity(intent);
     }
 }

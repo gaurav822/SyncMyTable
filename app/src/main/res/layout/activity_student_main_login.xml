@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
-    tools:context=".StudentMainLogin">
+    tools:context="com.example.synchmytable.StudentMainLogin">
 
     <LinearLayout
         android:orientation="vertical"
@@ -48,6 +48,7 @@
             android:padding="12dp"
             android:text="Login"
             android:backgroundTint="@color/colorAccent"/>
+
 
         <TextView
             android:layout_width="wrap_content"

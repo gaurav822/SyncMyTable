@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:baselineAligned="false"
     android:gravity="center"
-    tools:context=".MainActivity"
+    tools:context="com.example.synchmytable.MainActivity"
     android:background="@drawable/back">
 
 
