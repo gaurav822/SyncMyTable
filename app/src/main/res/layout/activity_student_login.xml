@@ -4,7 +4,8 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
-    tools:context="com.example.synchmytable.StudentLogin">
+    tools:context="com.example.synchmytable.StudentLogin"
+    android:background="#B68F8F">
 
     <LinearLayout
         android:orientation="vertical"
@@ -53,17 +54,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
-            android:text="Submit"
+            android:text="Activate"
             android:backgroundTint="@color/colorAccent"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already a User? Click here"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif-medium"
-            android:layout_gravity="center"
-            android:onClick="studentmainLogin"/>
 
     </LinearLayout>
 </ScrollView>

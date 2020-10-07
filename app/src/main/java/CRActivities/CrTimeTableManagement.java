@@ -46,7 +46,6 @@ public class CrTimeTableManagement extends AppCompatActivity implements View.OnC
         loadBtn = findViewById(R.id.load_btn);
 
         timetable = (TimetableView) findViewById(R.id.crtimetable);
-        timetable.setHeaderHighlight(2);
         initView();
     }
 

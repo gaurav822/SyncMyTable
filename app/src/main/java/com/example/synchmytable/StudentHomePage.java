@@ -3,6 +3,7 @@ package com.example.synchmytable;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,14 +26,19 @@ public class StudentHomePage extends AppCompatActivity {
     public static final int REQUEST_EDIT = 2;
 
     MaterialButton load_btn;
-
-
-
     private TimetableView timetable;
+
+    ProgressDialog pd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_home_page);
+
+        pd=new ProgressDialog(this);
+        pd.setCancelable(false);
+        pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        pd.setMessage("Synching please wait...");
 
         timetable = findViewById(R.id.timetable);
 
@@ -41,8 +47,19 @@ public class StudentHomePage extends AppCompatActivity {
         load_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Time table Loaded Successfully", Toast.LENGTH_SHORT).show();
+                loadSavedData();
             }
         });
+    }
+
+    private void loadSavedData(){
+        pd.show();
+        timetable.removeAll();
+        SharedPreferences mPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String savedData = mPref.getString("timetable_demo","");
+        if(savedData == null && savedData.equals("")) return;
+        timetable.load(savedData);
+        Toast.makeText(this,"loaded!",Toast.LENGTH_SHORT).show();
+        pd.dismiss();
     }
 }

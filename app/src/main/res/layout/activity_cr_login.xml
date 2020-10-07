@@ -4,7 +4,8 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
-    tools:context="com.example.synchmytable.CrLogin">
+    tools:context="com.example.synchmytable.CrLogin"
+    android:background="#B68F8F">
 
     <LinearLayout
         android:orientation="vertical"
@@ -24,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="CR ID" />
+                android:hint="Enter CR ID:" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password Label -->

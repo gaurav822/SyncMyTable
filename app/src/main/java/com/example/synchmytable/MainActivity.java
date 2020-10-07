@@ -16,15 +16,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void StudentLoginPage(View view) {
 
-        Intent intent=new Intent(this,StudentLogin.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        Intent intent=new Intent(this,StudentMainLogin.class);
         startActivity(intent);
     }
 
     public void CrLoginPage(View view) {
 
         Intent intent=new Intent(this, CrLogin.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 
     }

@@ -4,7 +4,8 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
-    tools:context="com.example.synchmytable.StudentMainLogin">
+    tools:context="com.example.synchmytable.StudentMainLogin"
+    android:background="#B68F8F">
 
     <LinearLayout
         android:orientation="vertical"
@@ -53,11 +54,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot Password? Click here"
+            android:text="Unable to Login? Tap Here!"
             android:textSize="20sp"
             android:fontFamily="sans-serif-medium"
             android:layout_gravity="center"
-            android:onClick="forgotPassword"/>
+            android:onClick="unableToLogin"/>
 
     </LinearLayout>
 </ScrollView>

@@ -3,6 +3,7 @@ package com.example.synchmytable;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,9 +30,16 @@ public class StudentLogin extends AppCompatActivity {
 
     List<Student> studentList;
 
+    ProgressDialog pd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        pd=new ProgressDialog(this);
+        pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        pd.setCancelable(false);
+        pd.setMessage("Please wait...");
         setContentView(R.layout.activity_student_login);
         email=(EditText) findViewById(R.id.input_email);
         id=(EditText) findViewById(R.id.input_studid);
@@ -57,13 +65,9 @@ public class StudentLogin extends AppCompatActivity {
         });
     }
 
-    public void studentmainLogin(View view) {
-
-        Intent intent=new Intent(this,StudentMainLogin.class);
-        startActivity(intent);
-    }
-
     public void verifyEmailandIDStud(View view) {
+
+        pd.show();
 
         boolean isVerified = false;
 
@@ -72,6 +76,7 @@ public class StudentLogin extends AppCompatActivity {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
         if (str_email.isEmpty() || str_id.isEmpty()) {
+            pd.dismiss();
             Toast.makeText(this, "Fields Can't be blank", Toast.LENGTH_SHORT).show();
         }
 
@@ -92,6 +97,7 @@ public class StudentLogin extends AppCompatActivity {
 
 
             if(temp!=1) {
+                pd.dismiss();
                 Toast.makeText(this, "Student ID or Email is Incorrect. Contact CR", Toast.LENGTH_SHORT).show();
 
             }
@@ -109,8 +115,10 @@ public class StudentLogin extends AppCompatActivity {
                             reference2.child("Students").child(str_id).child("verified").setValue(true);
                             Intent intent=new Intent(StudentLogin.this,StudentMainLogin.class);
                             startActivity(intent);
+                            pd.dismiss();
                             Toast.makeText(StudentLogin.this, "Open your email to Reset Password", Toast.LENGTH_SHORT).show();
                         } else {
+                            pd.dismiss();
                             Toast.makeText(StudentLogin.this, "Email Address is Incorrect", Toast.LENGTH_SHORT).show();
                         }
 
@@ -121,7 +129,9 @@ public class StudentLogin extends AppCompatActivity {
 
           else  {
 
-              Toast.makeText(this, "Already Registered. You can Login now from below link", Toast.LENGTH_SHORT).show();
+              pd.dismiss();
+
+              Toast.makeText(this, "Already Registered!", Toast.LENGTH_SHORT).show();
         }
 
 

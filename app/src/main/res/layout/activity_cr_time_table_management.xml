@@ -19,27 +19,38 @@
 
         <Button
             android:id="@+id/save_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Save" />
+            android:text="Save"
+            android:backgroundTint="@android:color/holo_blue_bright"/>
 
         <Button
             android:id="@+id/load_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"
-            android:text="Load" />
+            android:text="Load"
+            android:backgroundTint="@android:color/holo_blue_bright"/>
 
         <Button
             android:id="@+id/add_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:text="Add"
+            android:backgroundTint="@android:color/holo_blue_bright"/>
 
         <Button
             android:id="@+id/clear_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"
-            android:text="Clear" />
+            android:text="Clear"
+            android:backgroundTint="@android:color/holo_blue_bright"/>
 
     </LinearLayout>
 

@@ -68,10 +68,6 @@ public class StudentMainLogin extends AppCompatActivity {
         });
     }
 
-    public void forgotPassword(View view) {
-
-    }
-
     public void gotHomeStudentHome(View view) {
 
         String id=et_id.getText().toString();
@@ -129,5 +125,13 @@ public class StudentMainLogin extends AppCompatActivity {
             }
 
         }
+    }
+
+    public void unableToLogin(View view) {
+
+        Intent intent=new Intent(this,UnabletoLogin.class);
+        startActivity(intent);
+
+
     }
 }
